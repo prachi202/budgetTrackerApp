@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9c91dafdb6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="cmp-budgetTracker">
+            <div class="cmp-budgetTracker__container">
+                <section class="cmp-budgetTracker__container__heading">
+                    <p class="cmp-budgetTracker__container__heading--title">Budget Tracker</p>
+                    <p class="cmp-budgetTracker__container__heading--subtitle">Easiest way to track your transactions!</p>
+                </section>
+                <section class="cmp-budgetTracker__container__transactionControl">
+                    <div class="cmp-budgetTracker__container__transactionControl__actions">
+                        <h3 class="cmp-budgetTracker__container__transactionHeading">Add Transaction</h3>
+                        <form class="cmp-budgetTracker__container__transactionControl__actions__add">
+                            <input class="cmp-budgetTracker__container__transactionControl__actions__add--addSource" type="text" name="source" placeholder="Source" autocomplete="off">
+                            <input class="cmp-budgetTracker__container__transactionControl__actions__add--addAmount" type="number" name="amount" placeholder="Amount" autocomplete="off">
+                            <p class="cmp-budgetTracker__container__transactionControl__actions__add--errorText"></p>
+                            <input class="cmp-budgetTracker__container__transactionControl__actions__add--submit" type="submit" value="Add Transactions">
+                        </form>
+                    </div>
+                    <div class="cmp-budgetTracker__container__transactionControl__statistics">
+                        <h3 class="cmp-budgetTracker__container__transactionHeading">Statistics</h3>
+                        <p class="cmp-budgetTracker__container__transactionControl__statistics--balance">
+                            Balance: $<span id="cmp-budgetTracker__container__balance"></span>
+                        </p>
+                        <p class="cmp-budgetTracker__container__transactionControl__statistics--income">
+                            Income: $<span id="cmp-budgetTracker__container__income"></span>
+                        </p>
+                        <p class="cmp-budgetTracker__container__transactionControl__statistics--expense">
+                            Expense: $<span id="cmp-budgetTracker__container__expense"></span>
+                        </p>
+                    </div>
+                </section>
+                <section class="cmp-budgetTracker__container__transactionHistory">
+                    <h3 class="cmp-budgetTracker__container__transactionHeading">Transaction History</h3>
+                    <div class="cmp-budgetTracker__container__transactionHistory__record">
+                        <div class="cmp-budgetTracker__container__transactionHistory__record__income">
+                            <h3 class="cmp-budgetTracker__container__transactionHistory__record__subheading">Income</h3>
+                            <ul class="cmp-budgetTracker__container__transactionHistory__record__income__incomeList">
+                            </ul>
+                        </div>
+                        <div class="cmp-budgetTracker__container__transactionHistory__record__expense">
+                            <h3 class="cmp-budgetTracker__container__transactionHistory__record__subheading">Expense</h3>
+                            <ul class="cmp-budgetTracker__container__transactionHistory__record__expense__expenseList">        
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
